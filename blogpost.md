@@ -1,8 +1,8 @@
 # Intro - 125 words right now
 
-For a long time, cookies were the main way to store information about users visiting your app or website. They were used to record stateful elements like shopping cart items or options changed by a user. They were also used to remember user browsing habits or to keep a user logged in while they went form page to page. Then, HTML5 appeared on the scene and introduced LocalStorage and SessionStorage as unique data storage options. Both of these new objects boasted a much large storage capacity than cookies at a whopping 5MB. But between these three options, which is the best storage for your website? In this article, we will compare and contrast all three in the hopes of making that decision clearer for you.
+For a long time, cookies were the main way to store information about users visiting your app or website. They were used to record stateful elements like shopping cart items or options changed by a user. They were also used to remember user browsing habits or to keep a user logged in while they went form page to page. Then, HTML5 appeared on the scene and introduced LocalStorage as another data storage option. This new object (along with SessionStorage) boasted a much large storage capacity than cookies at a whopping 5MB. In this article, we will compare and contrast cookies and LocalStorage.
 
-# Cookies - 150 to 200 words; about 178 words right now
+# Cookies - 150 to 200 words; about 265 words right now
 
 First we'll start by exploring basic information about cookies. We'll also go over some of their pros and cons. So, what are cookies? According to whatarecookies.com they are small text files that are placed on a user's computer by a website. They hold a very small amount of data at a maximum capacity of 4KB, but they are capable of storing different types of information, such as the pages visited on a site or a user's login information. Cookies are limited in that they can only store strings.
 
@@ -14,37 +14,12 @@ There are two types of cookies: persistent cookies and session cookies. Session 
 
 Persistent cookies do have an expiration date. These cookies are stored on the user's disk until the expiration date and then permanently deleted. They can be used for other activities such as recording a user's habits while on a particular website in order to customize their experience.
 
-https://www.cisco.com/c/en/us/support/docs/security/web-security-appliance/117925-technote-csc-00.html#anc0
---persistent cookies; contains an expiration date
---stored on a disk until the specified expiration date
---before html5 app data was stored in cookies in every server request
---can set the expiration time for each cookie
---stores data that has to be sent back to the server
---smallest space (4KB limit) for name, value, expiry date
---only allow you to store strings
-
 # LocalStorage - 150 to 200 words; about 167 words right now
---stores data with no expiration date
---data is not sent with every HTTP request reducing traffic between client and server
---data persists until explicitly deleted; data saved for all current and future visits; can only be cleared through Javascript
---data stored is only available on same origin
---high storage limit just like session storage (5MB)
---allow you to store js primitives/objects
---improvement on cookies
---good for data that needs to be stored for longer periods of time
---an example of a good way to use LocalStorage would be in an application that may be used in regions without a persistent internet connection; the threat level of the data stored in this situation would have to be very low; to protect client privacy, it would be good to upload the data when connection is reestablished and then delete the locally stored version
---another option is to encrypt data in local storage
---firms with data that must be secured would not allow use of LocalStorage for their clients
+After HTML5 came out, many uses of cookies were replaced by the use of LocalStorage. This is because LocalStorage has a lot of advantages over cookies. One of the most important differences is that unlike cookies, data does not have to be sent back and forth with every HTTP request. This reduces the overall traffic between the client and server and reduces the amount of wasted bandwidth. This is because data is stored on the user's local disk and is not destroyed  or cleared by the loss of an internet connection. Additionally, LocalStorage can hold up to 5MB of information. This is a whole lot more than the 4KB than cookies hold.
 
-# SessionStorage - 150 to 200 words; about 90 words right now
---stores data only during session; changes made are saved for current and future visits within the same window, i.e. until the browser or tab is closed
---data stored is only available on same origin
---data is not transferred to the server
---storage limit is medium; larger than cookie, but smaller than LocalStorage (5MB)
---allow you to store js primitives/objects
---good for information that is session specific
---with the presence of dynamic ajax-driven interfaces this can be used to restore a specific site to the way that they last experienced it
+LocalStorage behaves like persistent cookies in terms of expiration. Data is not automatically destroyed unless it is cleared through Javascript code or unless there is an expiration date set. This can be good for larger bits of data that need to be stored for longer periods of time. Also, with LocalStorage you can not only store strings, but also Javascript primitives and objects.
 
+In my back-end web development course, we discussed cases where LocalStorage would be superior to cookies. An example of a good use of LocalStorage might be in an application used in regions without a persistent internet connection. My course instructor, Dani Roxberry, built such an application and used LocalStorage to protect and store data collected in areas with spotty WiFi or data connections. In order for this to be a good use of LocalStorage, the threat level of the data stored in this situation would have to be very low.  To protect client privacy, it would be good to upload the data when connection is re-established and then delete the locally stored version. Additionally, it would be advantageous to encrypt data that was being stored so that it would not be easily hacked. In our class discussion, we also established that highly vulnerable data, such as financial information, could not be stored or secured properly using LocalStorage in this way.
 
 # Conclusion - 100 words
 --
