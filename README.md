@@ -1,4 +1,4 @@
-# Intro
+# Cookies vs LocalStorage: What's the difference? 
 For a long time, cookies were the main way to store information about users visiting your app or website. They were used to record stateful elements like shopping cart items or options changed by a user. They were also used to remember user browsing habits or to keep a user logged in while they went form page to page. Then, HTML5 appeared on the scene and introduced LocalStorage as another data storage option. This new object (along with SessionStorage) boasted a much large storage capacity than cookies at a whopping 5MB. In this article, we will compare and contrast cookies and LocalStorage.
 
 # Cookies - small, but mighty
