@@ -1,7 +1,7 @@
-# Cookies vs LocalStorage: What's the difference? 
+# Cookies vs LocalStorage: What's the difference?
 For a long time, cookies were the main way to store information about users visiting your app or website. They were used to record stateful elements like shopping cart items or options changed by a user. They were also used to remember user browsing habits or to keep a user logged in while they went form page to page. Then, HTML5 appeared on the scene and introduced LocalStorage as another data storage option. This new object (along with SessionStorage) boasted a much large storage capacity than cookies at a whopping 5MB. In this article, we will compare and contrast cookies and LocalStorage.
 
-# Cookies - small, but mighty
+# Cookies - Small, but mighty
 First we'll start by exploring basic information about cookies. We'll also go over some of their pros and cons. So, what are cookies? According to whatarecookies.com they are small text files that are placed on a user's computer by a website. They hold a very small amount of data at a maximum capacity of 4KB, but they are capable of storing different types of information, such as the pages visited on a site or a user's login information. Cookies are limited in that they can only store strings.
 
 Many secure websites employ cookies to validate their users identities after they've logged in to prevent them from having to re-enter their credentials on every page. Another use for cookies is to customize or adjust user experience based on limited browsing history on the site.
@@ -21,7 +21,7 @@ In my back-end web development course, we discussed cases where LocalStorage wou
 
 In order for this to be a good use of LocalStorage, the threat level of the data stored in this situation would have to be very low.  To protect client privacy, it would be good to upload the data when connection is re-established and then delete the locally stored version. Additionally, it would be advantageous to encrypt data that was being stored so that it would not be easily hacked. In our class discussion, we also established that highly vulnerable data, such as financial information, could not be stored or secured properly using LocalStorage in this way.
 
-# Conclusion - 100 words
+# Conclusion
 While both storage options have their positives and negatives, they both have applications in modern web development. Cookies are smaller and send server information back withe every HTTP request, while LocalStorage is larger and can hold information on the client side.
 
 When you make your next application, think about these various uses and decide which type of storage is right for you.
